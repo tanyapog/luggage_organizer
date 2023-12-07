@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:luggage_organizer/features/auth/presentation/sign_in_screen.dart';
 
 void main() {
   runApp(const LuggageOrganizerApp());
@@ -9,12 +10,10 @@ class LuggageOrganizerApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       title: "LuggageOrganizer",
-      home: Scaffold(
-        appBar: AppBar(title: const Text("LuggageOrganizer")),
-        body: const Center(child: Text("LuggageOrganizer")),
-      ),
+      home: SignInScreen(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
