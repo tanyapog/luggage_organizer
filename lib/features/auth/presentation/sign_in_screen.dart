@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:luggage_organizer/global/presentation/theme/app_colors.dart';
 
 import '../../../global/presentation/theme/app_input.dart';
+import '../../../global/presentation/validator.dart';
 
 class SignInScreen extends StatelessWidget {
   const SignInScreen({super.key});
@@ -34,6 +35,7 @@ class SignInForm extends StatelessWidget {
             const Text('Luggage Organizer', textAlign: TextAlign.center, style: TextStyle(fontSize: 36, color: AppColors.primary)),
             const SizedBox(height: 80),
             TextFormField(
+              validator: (value) => Validator.isEmail(value),
               autocorrect: false,
               decoration: AppInputDecoration.roundedBorder.copyWith(
                 contentPadding: const EdgeInsets.symmetric(vertical: 15),
@@ -45,6 +47,7 @@ class SignInForm extends StatelessWidget {
             const SizedBox(height: 8),
             TextFormField(
               obscureText: true,
+              validator: (value) => Validator.isPasswordValid(value),
               autocorrect: false,
               decoration: AppInputDecoration.roundedBorder.copyWith(
                 contentPadding: const EdgeInsets.symmetric(vertical: 15),
