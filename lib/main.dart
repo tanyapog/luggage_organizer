@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:luggage_organizer/features/auth/presentation/sign_in_screen.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(const LuggageOrganizerApp());
 }
 
