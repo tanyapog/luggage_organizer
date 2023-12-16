@@ -1,14 +1,17 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:injectable/injectable.dart';
 import 'package:luggage_organizer/features/auth/presentation/sign_in_screen.dart';
 import 'package:luggage_organizer/utils/logging.dart';
 
+import 'firebase_options.dart';
 import 'injection.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await AppLogger().init();
   await configureInjection(Environment.prod);
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   runApp(const LuggageOrganizerApp());
 }
 
