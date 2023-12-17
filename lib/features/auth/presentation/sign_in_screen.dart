@@ -3,8 +3,10 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:luggage_organizer/global/presentation/theme/app_colors.dart';
 import 'package:luggage_organizer/global/presentation/validator.dart';
 
+import '../../../global/presentation/messages.dart';
 import '../../../global/presentation/theme/app_input.dart';
 import '../../../injection.dart';
+import '../../../utils/logging.dart';
 import '../logic/sign_in_form/sign_in_form_bloc.dart';
 
 class SignInScreen extends StatelessWidget {
@@ -31,7 +33,14 @@ class SignInForm extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocConsumer<SignInFormBloc, SignInFormState>(
-      listener: (context, state) {},
+      listenWhen: (previous, current) => previous.success != current.success,
+      listener: (context, state) {
+        if (state.success != null) {
+          state.success!
+              ? logData("todo request auth check")
+              : showError(context, state.errorMessage!);
+        }
+      },
       builder: (context, state) =>
           Form(
             key: _globalSignInFormKey,
