@@ -4,6 +4,6 @@ import 'package:luggage_organizer/main.dart';
 
 void main() {
   testWidgets('Simple test', (WidgetTester tester) async {
-    await tester.pumpWidget(const LuggageOrganizerApp());
+    await tester.pumpWidget(LuggageOrganizerApp());
   });
 }

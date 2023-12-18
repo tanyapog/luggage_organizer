@@ -1,10 +1,10 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:injectable/injectable.dart';
-import 'package:luggage_organizer/features/auth/presentation/sign_in_screen.dart';
 import 'package:luggage_organizer/utils/logging.dart';
 
 import 'firebase_options.dart';
+import 'global/presentation/routing/router.dart';
 import 'injection.dart';
 
 void main() async {
@@ -12,17 +12,17 @@ void main() async {
   await AppLogger().init();
   await configureInjection(Environment.prod);
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
-  runApp(const LuggageOrganizerApp());
+  runApp(LuggageOrganizerApp());
 }
 
 class LuggageOrganizerApp extends StatelessWidget {
-  const LuggageOrganizerApp({super.key});
+  LuggageOrganizerApp({super.key});
+  final appRouter = AppRouter();
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      title: "LuggageOrganizer",
-      home: SignInScreen(),
+    return MaterialApp.router(
+      routerConfig: appRouter.config(),
       debugShowCheckedModeBanner: false,
     );
   }
