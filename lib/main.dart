@@ -36,7 +36,7 @@ class LuggageOrganizerApp extends StatelessWidget {
               router.replace(const AuthorizedRoute());
               break;
             case AuthStatus.unauthenticated:
-              router.replace(SignInRoute());
+              router.replace(const SignInRoute());
               break;
             case AuthStatus.unknown:
               break;
