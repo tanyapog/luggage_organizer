@@ -65,7 +65,7 @@ class SignInFormBloc extends Bloc<SignInFormEvent, SignInFormState> {
       emit(_copyStateWithError("Unexpected error: $e"));
     }
     if (_authFacade.isAuthorized) {
-      logData("success");
+      logData("User ${_authFacade.signedInUser!.email} is successfully authorized");
       emit(_copyStateWithSuccess());
     }
   }
