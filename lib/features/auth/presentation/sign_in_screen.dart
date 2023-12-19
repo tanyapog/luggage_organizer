@@ -17,6 +17,7 @@ class SignInScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(),
       body: BlocProvider(
         create: (BuildContext context) => getIt<SignInFormBloc>(),
         child: const _SignInForm(),
