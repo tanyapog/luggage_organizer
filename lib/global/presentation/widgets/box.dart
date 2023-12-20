@@ -18,6 +18,7 @@ class Box extends SizedBox {
   static const s8 = Box.s(8);
   static const s16 = Box.s(16);
   static const s24 = Box.s(24);
+  static const s32 = Box.s(32);
   static const s40 = Box.s(40);
   static const s80 = Box.s(80);
 }

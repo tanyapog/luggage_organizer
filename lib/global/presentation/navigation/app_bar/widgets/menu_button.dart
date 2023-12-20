@@ -9,7 +9,7 @@ class MenuButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return IconButton(
-        onPressed: () => AutoRouter.of(context).push(const MenuRoute()),
+        onPressed: () => AutoRouter.of(context).push(MenuRoute()),
         icon: const Icon(Icons.menu),
     );
   }
