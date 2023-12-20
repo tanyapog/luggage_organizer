@@ -2,6 +2,7 @@ import 'package:auto_route/annotations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:luggage_organizer/global/presentation/theme/app_colors.dart';
+import 'package:luggage_organizer/global/presentation/theme/app_padding.dart';
 import 'package:luggage_organizer/global/presentation/validator.dart';
 
 import '../../../global/presentation/messages.dart';
@@ -51,7 +52,7 @@ class _SignInForm extends StatelessWidget {
         child: Container(
           padding: const EdgeInsets.all(10),
           child: ListView(
-            padding: const EdgeInsets.symmetric(horizontal: 20),
+            padding: AppPadding.horizontal,
             children: <Widget>[
               Box.s24,
               const Text('Luggage Organizer', textAlign: TextAlign.center, style: TextStyle(fontSize: 36, color: AppColors.primary)),
@@ -61,7 +62,7 @@ class _SignInForm extends StatelessWidget {
                 validator: (value) => Validator.isEmail(value),
                 autocorrect: false,
                 decoration: AppInputDecoration.roundedBorder.copyWith(
-                  contentPadding: const EdgeInsets.symmetric(vertical: 15),
+                  contentPadding: AppPadding.vertical15,
                   hintText: 'Email',
                   hintStyle: const TextStyle(color: AppColors.grey50),
                   prefixIcon: const Icon(Icons.email, color: AppColors.iconColor),
@@ -74,7 +75,7 @@ class _SignInForm extends StatelessWidget {
                 validator: (value) => Validator.isPasswordValid(value),
                 autocorrect: false,
                 decoration: AppInputDecoration.roundedBorder.copyWith(
-                  contentPadding: const EdgeInsets.symmetric(vertical: 15),
+                  contentPadding: AppPadding.vertical15,
                   hintText: 'Password',
                   hintStyle: const TextStyle(color:AppColors.grey50),
                   prefixIcon: const Icon(Icons.lock, color: AppColors.iconColor),
