@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../box.dart';
+
 class ErrorSnackBar extends SnackBar {
   final String message;
   ErrorSnackBar({super.key, required this.message}) : super(
@@ -7,7 +9,7 @@ class ErrorSnackBar extends SnackBar {
     content: Row(
       children: [
         const Icon(Icons.warning, color: Colors.red,),
-        const SizedBox(width: 8),
+        Box.s8,
         Flexible(child: Text(message)),
       ],
     ),

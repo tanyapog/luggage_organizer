@@ -6,6 +6,7 @@ import 'package:luggage_organizer/global/presentation/validator.dart';
 
 import '../../../global/presentation/messages.dart';
 import '../../../global/presentation/theme/app_input.dart';
+import '../../../global/presentation/widgets/box.dart';
 import '../../../injection.dart';
 import '../logic/authentication/auth_bloc.dart';
 import '../logic/sign_in_form/sign_in_form_bloc.dart';
@@ -52,9 +53,9 @@ class _SignInForm extends StatelessWidget {
           child: ListView(
             padding: const EdgeInsets.symmetric(horizontal: 20),
             children: <Widget>[
-              const SizedBox(height: 24),
+              Box.s24,
               const Text('Luggage Organizer', textAlign: TextAlign.center, style: TextStyle(fontSize: 36, color: AppColors.primary)),
-              const SizedBox(height: 80),
+              Box.s80,
               TextFormField(
                 onChanged: (value) => bloc.add(SignInFormEvent.emailChanged(value)),
                 validator: (value) => Validator.isEmail(value),
@@ -66,7 +67,7 @@ class _SignInForm extends StatelessWidget {
                   prefixIcon: const Icon(Icons.email, color: AppColors.iconColor),
                 ),
               ),
-              const SizedBox(height: 8),
+              Box.s8,
               TextFormField(
                 onChanged: (value) => bloc.add(SignInFormEvent.passwordChanged(value)),
                 obscureText: true,
@@ -110,7 +111,7 @@ class _SignInForm extends StatelessWidget {
                 child: const Text('SIGN IN WITH GOOGLE', style: TextStyle(color: AppColors.primaryDark, fontWeight: FontWeight.bold)),
               ),
               if (state.isSubmitting) ... [
-                const SizedBox(height: 8),
+                Box.s8,
                 const LinearProgressIndicator(),
               ]
             ],
