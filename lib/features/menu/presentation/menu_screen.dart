@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../global/presentation/messages.dart';
+import '../../../global/presentation/navigation/app_bar/lo_app_bar.dart';
 import '../../../global/presentation/theme/app_borders.dart';
 import '../../../global/presentation/theme/app_padding.dart';
 import '../../auth/logic/authentication/auth_bloc.dart';
@@ -14,7 +15,7 @@ class MenuScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("Luggage organizer menu")),
+      appBar: LoAppBar(title: "Luggage organizer menu"),
       body: const SafeArea(
         child: _LogOutButton(),
       ),
