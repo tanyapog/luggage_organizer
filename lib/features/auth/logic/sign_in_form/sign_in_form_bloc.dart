@@ -3,9 +3,9 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
 import 'package:luggage_organizer/utils/logging.dart';
 
+import '../../../../global/domain/models/user/i_auth_facade.dart';
 import '../../../../utils/event_transformers.dart';
 import '../../data/auth_failure.dart';
-import '../../data/i_auth_facade.dart';
 
 part 'sign_in_form_event.dart';
 part 'sign_in_form_state.dart';

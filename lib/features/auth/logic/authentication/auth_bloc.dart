@@ -3,8 +3,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
 
+import '../../../../global/domain/models/user/i_auth_facade.dart';
 import '../../../../utils/logging.dart';
-import '../../data/i_auth_facade.dart';
 
 part 'auth_event.dart';
 part 'auth_state.dart';

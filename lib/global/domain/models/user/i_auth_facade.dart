@@ -1,4 +1,4 @@
-import '../../../global/domain/models/user/user.dart';
+import 'user.dart';
 
 abstract class IAuthFacade {
   User? get signedInUser;

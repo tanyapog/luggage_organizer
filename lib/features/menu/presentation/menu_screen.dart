@@ -2,12 +2,12 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../../global/domain/models/user/i_auth_facade.dart';
 import '../../../global/presentation/messages.dart';
 import '../../../global/presentation/navigation/app_bar/lo_app_bar.dart';
 import '../../../global/presentation/theme/app_padding.dart';
 import '../../../global/presentation/widgets/box.dart';
 import '../../../injection.dart';
-import '../../auth/data/i_auth_facade.dart';
 import '../../auth/logic/authentication/auth_bloc.dart';
 import 'widgets/menu_element.dart';
 

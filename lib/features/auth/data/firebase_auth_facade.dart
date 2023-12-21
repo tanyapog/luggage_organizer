@@ -2,10 +2,10 @@ import 'package:firebase_auth/firebase_auth.dart' hide User;
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:injectable/injectable.dart';
 
+import '../../../global/domain/models/user/i_auth_facade.dart';
 import '../../../global/domain/models/user/user.dart';
 import 'auth_failure.dart';
 import 'firebase_user_mapper.dart';
-import 'i_auth_facade.dart';
 
 /// Provides signedIn user if any.
 /// Responsible for all auth actions like registering, signing in and out through Firebase.
