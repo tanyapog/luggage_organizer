@@ -1,6 +1,7 @@
 import 'package:auto_route/annotations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:luggage_organizer/global/presentation/theme/app_buttons.dart';
 import 'package:luggage_organizer/global/presentation/theme/app_colors.dart';
 import 'package:luggage_organizer/global/presentation/theme/app_padding.dart';
 import 'package:luggage_organizer/global/presentation/validator.dart';
@@ -84,32 +85,28 @@ class _SignInForm extends StatelessWidget {
               Row(
                 children: <Widget>[
                   Expanded(
-                    child: TextButton(
+                    child: AppButtons.texted(
+                      title: 'SIGN IN',
                       onPressed: () {
                         _globalSignInFormKey.currentState?.validate();
-                        context.read<SignInFormBloc>()
-                            .add(const SignInFormEvent.signInWithEmailAndPasswordPressed());
+                        context.read<SignInFormBloc>().add(const SignInFormEvent.signInWithEmailAndPasswordPressed());
                       },
-                      child: const Text('SIGN IN', style: TextStyle(color: AppColors.primaryDark, fontWeight: FontWeight.bold)),
                     ),
                   ),
                   Expanded(
-                    child: TextButton(
+                    child: AppButtons.texted(
+                      title: 'REGISTER',
                       onPressed: () {
                         _globalSignInFormKey.currentState?.validate();
-                        context.read<SignInFormBloc>()
-                            .add(const SignInFormEvent.registerWithEmailAndPasswordPressed());
+                        context.read<SignInFormBloc>().add(const SignInFormEvent.registerWithEmailAndPasswordPressed());
                       },
-                      child: const Text('REGISTER', style: TextStyle(color: AppColors.primaryDark, fontWeight: FontWeight.bold)),
                     ),
                   ),
                 ],
               ),
-              ElevatedButton(
-                onPressed: () => context.read<SignInFormBloc>()
-                    .add(const SignInFormEvent.signInWithGooglePressed()),
-                style: ElevatedButton.styleFrom(backgroundColor: AppColors.button),
-                child: const Text('SIGN IN WITH GOOGLE', style: TextStyle(color: AppColors.primaryDark, fontWeight: FontWeight.bold)),
+              AppButtons.colored(
+                title: 'SIGN IN WITH GOOGLE',
+                onPressed: () => context.read<SignInFormBloc>().add(const SignInFormEvent.signInWithGooglePressed())
               ),
               if (state.isSubmitting) ... [
                 Box.s8,
