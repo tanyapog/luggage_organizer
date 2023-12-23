@@ -8,7 +8,7 @@ class Trip with _$Trip {
   const Trip._();
 
   const factory Trip({
-    required String id,
+    String? id,
     required String name,
     required String description,
     TripType? type,
@@ -17,7 +17,6 @@ class Trip with _$Trip {
   }) = _Trip;
 
   factory Trip.empty() => Trip(
-    id: "",
     name: "",
     description: "",
     dateCreated: DateTime.now(),
