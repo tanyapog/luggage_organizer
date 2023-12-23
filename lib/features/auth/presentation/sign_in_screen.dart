@@ -63,9 +63,7 @@ class _SignInForm extends StatelessWidget {
                 validator: (value) => Validator.isEmail(value),
                 autocorrect: false,
                 decoration: AppInputDecoration.roundedBorder.copyWith(
-                  contentPadding: AppPadding.vertical15,
                   hintText: 'Email',
-                  hintStyle: const TextStyle(color: AppColors.grey50),
                   prefixIcon: const Icon(Icons.email, color: AppColors.iconColor),
                 ),
               ),
@@ -76,9 +74,7 @@ class _SignInForm extends StatelessWidget {
                 validator: (value) => Validator.isPasswordValid(value),
                 autocorrect: false,
                 decoration: AppInputDecoration.roundedBorder.copyWith(
-                  contentPadding: AppPadding.vertical15,
                   hintText: 'Password',
-                  hintStyle: const TextStyle(color:AppColors.grey50),
                   prefixIcon: const Icon(Icons.lock, color: AppColors.iconColor),
                 ),
               ),
