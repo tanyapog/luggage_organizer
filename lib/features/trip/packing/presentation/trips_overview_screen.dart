@@ -7,8 +7,8 @@ import '../../../../global/presentation/routing/router.gr.dart';
 import '../../../../global/presentation/theme/app_colors.dart';
 
 @RoutePage()
-class TripOverviewScreen extends StatelessWidget {
-  const TripOverviewScreen({super.key});
+class TripsOverviewScreen extends StatelessWidget {
+  const TripsOverviewScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
