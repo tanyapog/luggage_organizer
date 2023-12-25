@@ -2,11 +2,11 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:injectable/injectable.dart';
 import 'package:rxdart/transformers.dart';
 
-import '../../../global/data/firestore_helpers.dart';
-import '../../../global/domain/models/trip/i_trip_repository.dart';
-import '../../../global/domain/models/trip/trip.dart';
-import '../../../global/domain/models/trip/trip_failure.dart';
-import '../../../utils/logging.dart';
+import '../../../../global/data/firestore_helpers.dart';
+import '../../../../global/domain/models/trip/i_trip_repository.dart';
+import '../../../../global/domain/models/trip/trip.dart';
+import '../../../../global/domain/models/trip/trip_failure.dart';
+import '../../../../utils/logging.dart';
 import 'trip_dto.dart';
 
 @LazySingleton(as: ITripRepository)

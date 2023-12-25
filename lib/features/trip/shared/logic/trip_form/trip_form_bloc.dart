@@ -3,9 +3,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
 
-import '../../../../global/domain/models/trip/i_trip_repository.dart';
-import '../../../../global/domain/models/trip/trip.dart';
-import '../../../../global/domain/models/trip/trip_failure.dart';
+import '../../../../../global/domain/models/trip/i_trip_repository.dart';
+import '../../../../../global/domain/models/trip/trip.dart';
+import '../../../../../global/domain/models/trip/trip_failure.dart';
 
 part 'trip_form_event.dart';
 part 'trip_form_state.dart';

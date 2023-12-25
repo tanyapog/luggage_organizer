@@ -5,8 +5,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../../global/presentation/navigation/app_bar/lo_app_bar.dart';
 import '../../../../global/presentation/navigation/app_bar/widgets/menu_button.dart';
 import '../../../../injection.dart';
-import '../../logic/trip_form/trip_form_bloc.dart';
-import '../shared/widgets/trip_form.dart';
+import '../../shared/logic/trip_form/trip_form_bloc.dart';
+import '../../shared/presentation/widgets/trip_form.dart';
 
 @RoutePage()
 class WizardStartScreen extends StatelessWidget {
