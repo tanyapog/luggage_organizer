@@ -1,6 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:luggage_organizer/global/presentation/routing/router.gr.dart';
 
 import '../../../global/domain/models/user/i_auth_facade.dart';
 import '../../../global/presentation/messages.dart';
@@ -28,7 +29,12 @@ class MenuScreen extends StatelessWidget {
             Box.s32,
             MenuElement(iconData: Icons.person, title: _auth.signedInUser?.email ?? "username"),
             Box.s8,
-            const MenuElement(iconData: Icons.card_travel, title: "Trips", showTrailing: true),
+            MenuElement(
+              onTap: () => context.navigateTo(const TripsOverviewRoute()),
+              title: "Trips",
+              iconData: Icons.card_travel,
+              showTrailing: true,
+            ),
             Box.s8,
             const MenuElement(iconData: Icons.category, title: "Categories", showTrailing: true),
             Box.s8,
