@@ -1,0 +1,16 @@
+{
+  "name": "",
+  "css_prefix_text": "",
+  "css_use_suffix": false,
+  "hinting": true,
+  "units_per_em": 1000,
+  "ascent": 850,
+  "glyphs": [
+    {
+      "uid": "23663ae93da8356f8abf2d392a1c29e3",
+      "css": "sad",
+      "code": 59477,
+      "src": "linearicons"
+    }
+  ]
+}
