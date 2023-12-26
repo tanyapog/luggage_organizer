@@ -29,7 +29,10 @@ class TripRepository implements ITripRepository {
         .orderBy('dateCreated', descending: true)
         .snapshots() // it's optimized and cheaper than .getDocuments which always loads all the documents
         .map((snapshot) => snapshot.docs.map((doc) => doc.data().toDomain()).toList())
-        .onErrorReturnWith((e, stackTrace) => throw TripFailure.fromError(e));
+        .onErrorReturnWith((e, stackTrace) {
+          logError("watchAll failed with $e");
+          throw TripFailure.fromError(e);
+        });
   }
 
   @override
@@ -40,7 +43,10 @@ class TripRepository implements ITripRepository {
         .snapshots() // it's optimized and cheaper than .getDocuments
         .map((snapshot) => snapshot.docs.map((doc) => doc.data().toDomain()))
         .map((trips) => trips.where((trip) => !trip.complete).toList())
-        .onErrorReturnWith((e, stackTrace) => throw TripFailure.fromError(e));
+        .onErrorReturnWith((e, stackTrace) {
+          logError("watchUncompleted failed with $e");
+          throw TripFailure.fromError(e);
+        });
   }
 
   @override
