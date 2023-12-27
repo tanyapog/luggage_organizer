@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../global/domain/models/trip/trip.dart';
+import '../../../../../../global/domain/models/trip/trip.dart';
 
 class TripCard extends StatelessWidget {
   final Trip trip;

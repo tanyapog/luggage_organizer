@@ -2,12 +2,12 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../../global/presentation/navigation/app_bar/lo_app_bar.dart';
-import '../../../../global/presentation/navigation/app_bar/widgets/menu_button.dart';
-import '../../../../global/presentation/routing/router.gr.dart';
-import '../../../../global/presentation/theme/app_colors.dart';
-import '../../../../injection.dart';
-import '../logic/trip_watcher/trip_watcher_bloc.dart';
+import '../../../../../global/presentation/navigation/app_bar/lo_app_bar.dart';
+import '../../../../../global/presentation/navigation/app_bar/widgets/menu_button.dart';
+import '../../../../../global/presentation/routing/router.gr.dart';
+import '../../../../../global/presentation/theme/app_colors.dart';
+import '../../../../../injection.dart';
+import '../../logic/trip_watcher/trip_watcher_bloc.dart';
 import 'widgets/trips_overview_body.dart';
 
 @RoutePage()

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:luggage_organizer/features/trip/packing/presentation/widgets/trip_card.dart';
-import 'package:luggage_organizer/global/presentation/theme/app_padding.dart';
-import 'package:luggage_organizer/global/presentation/widgets/errors/error_full_screen.dart';
 
-import '../../logic/trip_watcher/trip_watcher_bloc.dart';
+import '../../../../../../global/presentation/theme/app_padding.dart';
+import '../../../../../../global/presentation/widgets/errors/error_full_screen.dart';
+import '../../../logic/trip_watcher/trip_watcher_bloc.dart';
+import 'trip_card.dart';
 
 class TripsOverviewBody extends StatelessWidget {
   const TripsOverviewBody({super.key});
