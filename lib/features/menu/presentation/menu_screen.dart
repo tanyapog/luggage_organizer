@@ -1,11 +1,11 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:luggage_organizer/global/presentation/routing/router.gr.dart';
 
 import '../../../global/domain/models/user/i_auth_facade.dart';
 import '../../../global/presentation/messages.dart';
 import '../../../global/presentation/navigation/app_bar/lo_app_bar.dart';
+import '../../../global/presentation/routing/router.gr.dart';
 import '../../../global/presentation/theme/app_padding.dart';
 import '../../../global/presentation/widgets/box.dart';
 import '../../../injection.dart';

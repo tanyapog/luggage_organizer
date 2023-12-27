@@ -2,13 +2,13 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:injectable/injectable.dart';
-import 'package:luggage_organizer/utils/logging.dart';
 
 import 'features/auth/logic/authentication/auth_bloc.dart';
 import 'firebase_options.dart';
 import 'global/presentation/routing/router.dart';
 import 'global/presentation/routing/router.gr.dart';
 import 'injection.dart';
+import 'utils/logging.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

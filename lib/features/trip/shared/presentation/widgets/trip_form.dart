@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
-import 'package:luggage_organizer/global/presentation/theme/app_padding.dart';
 
 import '../../../../../global/presentation/theme/app_buttons.dart';
 import '../../../../../global/presentation/theme/app_input.dart';
+import '../../../../../global/presentation/theme/app_padding.dart';
 import '../../../../../global/presentation/validator.dart';
 import '../../logic/trip_form/trip_form_bloc.dart';
 

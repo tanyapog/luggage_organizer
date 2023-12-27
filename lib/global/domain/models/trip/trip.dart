@@ -1,5 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:luggage_organizer/global/domain/models/trip_type/trip_type.dart';
+
+import '../trip_type/trip_type.dart';
 
 part 'trip.freezed.dart';
 

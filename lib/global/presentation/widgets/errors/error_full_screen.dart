@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:luggage_organizer/global/presentation/theme/app_icon.dart';
-import 'package:luggage_organizer/global/presentation/widgets/box.dart';
 
 import '../../theme/app_colors.dart';
+import '../../theme/app_icon.dart';
 import '../../theme/app_padding.dart';
 import '../../theme/app_text.dart';
+import '../box.dart';
 
 class ErrorFullscreen extends StatelessWidget {
   final String? errorMessage;

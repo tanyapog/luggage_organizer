@@ -1,13 +1,13 @@
 import 'package:auto_route/annotations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:luggage_organizer/global/presentation/theme/app_buttons.dart';
-import 'package:luggage_organizer/global/presentation/theme/app_colors.dart';
-import 'package:luggage_organizer/global/presentation/theme/app_padding.dart';
-import 'package:luggage_organizer/global/presentation/validator.dart';
 
 import '../../../global/presentation/messages.dart';
+import '../../../global/presentation/theme/app_buttons.dart';
+import '../../../global/presentation/theme/app_colors.dart';
 import '../../../global/presentation/theme/app_input.dart';
+import '../../../global/presentation/theme/app_padding.dart';
+import '../../../global/presentation/validator.dart';
 import '../../../global/presentation/widgets/box.dart';
 import '../../../injection.dart';
 import '../logic/authentication/auth_bloc.dart';

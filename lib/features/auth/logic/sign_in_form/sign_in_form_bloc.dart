@@ -1,10 +1,10 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
-import 'package:luggage_organizer/utils/logging.dart';
 
 import '../../../../global/domain/models/user/i_auth_facade.dart';
 import '../../../../utils/event_transformers.dart';
+import '../../../../utils/logging.dart';
 import '../../data/auth_failure.dart';
 
 part 'sign_in_form_event.dart';
