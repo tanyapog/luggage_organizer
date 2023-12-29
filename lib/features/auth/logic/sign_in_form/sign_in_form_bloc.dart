@@ -4,7 +4,7 @@ import 'package:injectable/injectable.dart';
 
 import '../../../../global/domain/models/user/i_auth_facade.dart';
 import '../../../../utils/event_transformers.dart';
-import '../../../../utils/logging.dart';
+import '../../../../utils/logging/logging.dart';
 import '../../data/auth_failure.dart';
 
 part 'sign_in_form_event.dart';

@@ -6,7 +6,7 @@ import '../../../../global/data/firestore_helpers.dart';
 import '../../../../global/domain/models/trip/i_trip_repository.dart';
 import '../../../../global/domain/models/trip/trip.dart';
 import '../../../../global/domain/models/trip/trip_failure.dart';
-import '../../../../utils/logging.dart';
+import '../../../../utils/logging/logging.dart';
 import 'trip_dto.dart';
 
 @LazySingleton(as: ITripRepository)

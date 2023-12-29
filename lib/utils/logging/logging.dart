@@ -4,7 +4,7 @@ import 'package:logging/logging.dart';
 void logData(dynamic data) =>
     AppLogger().logData(data.toString());
 
-void logError(String data, {Exception? exception, StackTrace? stackTrace}) =>
+void logError(dynamic data, {Object? exception, StackTrace? stackTrace}) =>
     AppLogger().logError(data, exception, stackTrace);
 
 class AppLogger {
@@ -36,6 +36,6 @@ class AppLogger {
 
   logData(String message) => _logger.fine(message);
 
-  logError(String message, [Exception? exception, StackTrace? stackTrace]) =>
+  logError(String message, [Object? exception, StackTrace? stackTrace]) =>
       _logger.shout(message, exception, stackTrace);
 }

@@ -8,13 +8,15 @@ import 'firebase_options.dart';
 import 'global/presentation/routing/router.dart';
 import 'global/presentation/routing/router.gr.dart';
 import 'injection.dart';
-import 'utils/logging.dart';
+import 'utils/logging/app_bloc_observer.dart';
+import 'utils/logging/logging.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await AppLogger().init();
   await configureInjection(Environment.prod);
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+  Bloc.observer = AppBlocObserver();
   runApp(LuggageOrganizerApp());
 }
 
