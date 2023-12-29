@@ -10,8 +10,8 @@ class TripFormState with _$TripFormState {
     String? errorMessage,
   }) = _TripFormState;
 
-  factory TripFormState.initial() => TripFormState(
-    trip: Trip.empty(),
-    isEditing: false,
+  factory TripFormState.initial(Trip? trip) => TripFormState(
+    trip: trip ?? Trip.empty(),
+    isEditing: trip != null,
   );
 }

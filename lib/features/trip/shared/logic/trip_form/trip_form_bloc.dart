@@ -15,12 +15,15 @@ part 'trip_form_bloc.freezed.dart';
 class TripFormBloc extends Bloc<TripFormEvent, TripFormState> {
   final ITripRepository _tripRepository;
 
-  TripFormBloc(this._tripRepository) : super(TripFormState.initial()) {
-    on<TripFormEvent>((event, emit) => event.map(
-      initialized: (event) => emit(event.trip == null
-          ? state.copyWith(errorMessage: null)
-          : state.copyWith(trip: event.trip!, isEditing: true)),
+  TripFormBloc(
+      this._tripRepository,
+      // trip as a parameter helps escape the error
+      // "setState() or markNeedsBuild() called during build"
+      // that arise in TripFormField's state didUpdateWidget() if trip is set through event.
+      @factoryParam Trip? trip
+  ) : super(TripFormState.initial(trip)) {
 
+    on<TripFormEvent>((event, emit) => event.map(
       nameChanged: (event) => emit(state.copyWith(
         trip: state.trip.copyWith(name: event.name))),
 

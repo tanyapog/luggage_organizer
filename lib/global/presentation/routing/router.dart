@@ -15,6 +15,7 @@ class AppRouter extends $AppRouter {
         children: [
           RedirectRoute(path: '', redirectTo: 'tripsOverview'),
           AutoRoute(path: 'tripsOverview', page: TripsOverviewRoute.page),
+          AutoRoute(path: 'tripEdit', page: TripEditRoute.page),
           AutoRoute(path: 'wizard', page: WizardStartRoute.page),
           AutoRoute(path: 'menu', page: MenuRoute.page),
         ]
