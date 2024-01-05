@@ -76,6 +76,10 @@ class TripRepository implements ITripRepository {
   }
 
   @override
+  Future<Trip> switchCompleted(Trip trip) async =>
+      await update(trip.copyWith(complete: !trip.complete));
+
+  @override
   Future<void> delete(Trip trip) async {
       try {
         final userDoc = await _firestore.userDocument();
