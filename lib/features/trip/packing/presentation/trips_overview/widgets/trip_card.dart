@@ -45,8 +45,8 @@ class TripCard extends StatelessWidget {
             ),
             child: Card(
               child: ListTile(
-                title: Text(trip.name),
-                subtitle: trip.description.isNotEmpty ? Text(trip.description) : null,
+                title: Text(trip.name, style: _getStyle(trip.complete)),
+                subtitle: trip.description.isNotEmpty ? Text(trip.description, style: _getStyle(trip.complete)) : null,
               ),
             ),
           ),
@@ -54,6 +54,8 @@ class TripCard extends StatelessWidget {
       ),
     );
   }
+
+  TextStyle _getStyle(bool complete) => TextStyle(color: complete ? AppColors.grey90 : AppColors.grey60);
 }
 
 class CompleteButton extends StatelessWidget {
