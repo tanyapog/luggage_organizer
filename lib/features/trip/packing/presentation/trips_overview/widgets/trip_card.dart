@@ -55,7 +55,7 @@ class TripCard extends StatelessWidget {
     );
   }
 
-  TextStyle _getStyle(bool complete) => TextStyle(color: complete ? AppColors.grey90 : AppColors.grey60);
+  TextStyle _getStyle(bool complete) => TextStyle(color: complete ? AppColors.grey60 : AppColors.grey90);
 }
 
 class CompleteButton extends StatelessWidget {
