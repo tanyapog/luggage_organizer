@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../../global/presentation/theme/app_buttons.dart';
+import '../../../../../global/presentation/theme/app_colors.dart';
 import '../../../../../global/presentation/theme/app_padding.dart';
+import '../../../../../global/presentation/theme/app_text.dart';
 import '../../../../../global/presentation/validator.dart';
 import '../../logic/trip_form/trip_form_bloc.dart';
 import 'trip_form_field.dart';
@@ -15,7 +17,8 @@ class TripForm extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final tripFormBloc = context.read<TripFormBloc>();
-    var trip = context.watch<TripFormBloc>().state.trip;
+    final currentState = context.watch<TripFormBloc>().state;
+    var trip = currentState.trip;
     return BlocBuilder<TripFormBloc, TripFormState>(
       bloc: tripFormBloc,
       builder: (context, state) => Form(
@@ -42,6 +45,13 @@ class TripForm extends StatelessWidget {
                       maxLines: 5,
                     ),
                     const SizedBox(height: 8),
+                    if (currentState.isEditing) CheckboxListTile(
+                      title: Text("Completed", style: AppTextStyle.titleMedium),
+                      value: currentState.trip.complete,
+                      onChanged: (_) => tripFormBloc.add(const TripFormEvent.completedPressed()),
+                      activeColor: AppColors.primary,
+                      contentPadding: EdgeInsets.zero,
+                    ),
                   ],
                 ),
                 const SizedBox(height: 8),
