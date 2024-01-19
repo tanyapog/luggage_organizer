@@ -15,24 +15,41 @@ part 'trip_watcher_bloc.freezed.dart';
 class TripWatcherBloc extends Bloc<TripWatcherEvent, TripWatcherState> {
   final ITripRepository _tripRepository;
 
-  TripWatcherBloc(this._tripRepository) : super(const TripWatcherState.initial()){
-    on<TripWatcherEvent>(
-          (event, emit) => event.map(
+  TripWatcherBloc(this._tripRepository) : super(const TripWatcherState()){
+    on<TripWatcherEvent>((event, emit) => event.map(
         watchAll: (event) async {
-          emit(const TripWatcherState.loading());
+          emit(state.copyWith(status: Status.loading, errorMessage: null));
           await emit.forEach<List<Trip>>(
             _tripRepository.watchAll(),
-            onData: (trips) => TripWatcherState.succeed(trips),
-            onError: (e, stackTrace) => TripWatcherState.failed(TripFailure.fromError(e)),
+            onData: (trips) => TripWatcherState(
+              showUncompleted: true,
+              trips: trips,
+              status: Status.success,
+              errorMessage: null,
+            ),
+            onError: (e, stackTrace) => TripWatcherState(
+              showUncompleted: true,
+              status: Status.failure,
+              errorMessage: TripFailure.fromError(e).message,
+            ),
           );
           return null;
         },
         watchUncompleted: (event) async {
-          emit(const TripWatcherState.loading());
+          emit(state.copyWith(status: Status.loading, errorMessage: null));
           await emit.forEach<List<Trip>>(
             _tripRepository.watchUncompleted(),
-            onData: (trips) => TripWatcherState.succeed(trips),
-            onError: (e, stackTrace) => TripWatcherState.failed(TripFailure.fromError(e)),
+            onData: (trips) => TripWatcherState(
+              showUncompleted: false,
+              trips: trips,
+              status: Status.success,
+              errorMessage: null,
+            ),
+            onError: (e, stackTrace) => TripWatcherState(
+              showUncompleted: false,
+              status: Status.failure,
+              errorMessage: TripFailure.fromError(e).message,
+            ),
           );
           return null;
         },
