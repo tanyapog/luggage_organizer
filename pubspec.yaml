@@ -41,3 +41,4 @@ flutter:
         - asset: assets/fonts/AppIcon.ttf
   assets:
     - assets/icons/
+    - assets/data/

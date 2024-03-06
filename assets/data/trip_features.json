@@ -1,0 +1,378 @@
+[
+  {
+    "name" : "Always pack",
+    "tripFeatures" : [
+      {
+        "name" : "Always pack",
+        "items" : [
+          "passport",
+          "cash",
+          "credit_cards",
+          "smartphone",
+          "laptop",
+          "player",
+          "jacket",
+          "jeans",
+          "t-shorts",
+          "underpants",
+          "bra",
+          "socks",
+          "sleepers",
+          "tooth_brash",
+          "tooth_paste",
+          "headache",
+          "zoviracs",
+          "cup",
+          "spoon",
+          "sleep_mask",
+          "pen_notebook",
+          "tea",
+          "water"
+        ]
+      }
+    ]
+  },
+  {
+    "name" : "Purpose",
+    "tripFeatures" : [
+      {
+        "name" : "Business trip",
+        "tag": "businessTrip",
+        "items" : [
+          "pajamas",
+          "suitcase"
+        ]
+      },
+      {
+        "name" : "Weekend trip",
+        "tag": "weekendTrip",
+        "items" : [
+          "camera",
+          "pajamas",
+          "suitcase"
+        ]
+      },
+      {
+        "name" : "Visiting a city",
+        "tag": "visitingCity",
+        "items" : [
+          "transport_card",
+          "camera",
+          "pajamas",
+          "suitcase"
+        ]
+      },
+      {
+        "name" : "Visiting a country",
+        "tag": "visitingCountry",
+        "items" : [
+          "medical_insurance",
+          "transport_card",
+          "camera",
+          "pajamas"
+        ]
+      },
+      {
+        "name" : "A long travel",
+        "tag": "longTravel",
+        "items" : [
+          "medical_insurance",
+          "transport_card",
+          "camera",
+          "pajamas",
+          "suitcase"
+        ]
+      },
+      {
+        "name" : "Sport event",
+        "tag": "sportEvent",
+        "items" : [
+          "medical_insurance",
+          "medical_certificate",
+          "pajamas",
+          "s-pants",
+          "s-boots",
+          "suitcase"
+        ]
+      },
+      {
+        "name" : "Sport camp",
+        "tag": "sportCamp",
+        "items" : [
+          "medical_insurance",
+          "camera",
+          "s-pants", "tent",
+          "jetboil"
+        ]
+      },
+      {
+        "name" : "Camping",
+        "tag": "camping",
+        "items" : [
+          "cup",
+          "tent",
+          "jetboil"
+        ]
+      },
+      {
+        "name" : "Snowboarding and Mountain Skiing",
+        "tag" : "mountainSkiing",
+        "items" : [
+          "medical_insurance",
+          "ski_pass",
+          "camera",
+          "pajamas",
+          "s-pants",
+          "s-boots",
+          "suitcase",
+          "ski",
+          "snowboard"
+        ]
+      },
+      {
+        "name" : "Tracking",
+        "tag": "tracking",
+        "items" : [
+          "medical_insurance",
+          "maps",
+          "menu",
+          "camera",
+          "navigator",
+          "s-pants",
+          "s-boots",
+          "crocks",
+          "backpack_90",
+          "tent",
+          "rope",
+          "jetboil"
+        ]
+      }
+    ]
+  }, {
+    "name" : "Activity",
+    "tripFeatures" : [
+      {
+        "name" : "Hiking",
+        "tag" : "hiking",
+        "items" : [
+          "medical_insurance",
+          "maps",
+          "navigator",
+          "s-pants",
+          "s-boots",
+          "jetboil"
+        ]
+      },
+      {
+        "name" : "Gym climbing",
+        "tag" : "gymClimbing",
+        "items" : [
+          "tights",
+          "climbing_shoes"
+        ]
+      },
+      {
+        "name" : "Rock climbing",
+        "tag" : "rockClimbing",
+        "items" : [
+          "medical_insurance",
+          "s-pants",
+          "tights",
+          "climbing_shoes",
+          "backpack_90",
+          "harness",
+          "rope",
+          "jetboil"
+        ]
+      },
+      {
+        "name" : "Cross country skiing",
+        "tag" : "crossCountrySkiing",
+        "items" : [
+          "s-pants",
+          "s-boots",
+          "ski"
+        ]
+      },
+      {
+        "name" : "Running",
+        "tag" : "running",
+        "items" : [
+          "tights",
+          "snickers"
+        ]
+      },
+      {
+        "name" : "Swimming",
+        "tag" : "swimming",
+        "items" : [
+          "crocks",
+          "swimsuit"
+        ]
+      },
+      {
+        "name" : "Sauna",
+        "tag" : "sauna",
+        "items" : [
+          "swimsuit", 
+          "sleepers", 
+          "washcloth"
+        ]
+      },
+      {
+        "name" : "Mountaineering",
+        "tag" : "mountaineering",
+        "items" : [
+          "backpack_90",
+          "harness",
+          "rope",
+          "jetboil"
+        ]
+      },
+      {
+        "name" : "Ski marathon",
+        "tag" : "skiMarathon",
+        "items" : [
+          "s-pants",
+          "s-boots",
+          "ski"
+        ]
+      }
+    ]
+  }, {
+    "name" : "Transport",
+    "tripFeatures" : [
+      {
+        "name" : "Train",
+        "items" : [
+          "tickets",
+          "pajamas"
+        ]
+      },
+      {
+        "name" : "Airplane",
+        "items" : [
+          "tickets"
+        ]
+      },
+      {
+        "name" : "Car",
+        "items" : [
+          "driver_licence"
+        ]
+      },
+      {
+        "name" : "Bus",
+        "items" : [
+          "tickets"
+        ]
+      }
+    ]
+  }, {
+    "name" : "Accommodation",
+    "tripFeatures" : [
+      {
+        "name" : "Hotel",
+        "items" : [
+          "cup",
+          "spoon"
+        ]
+      },
+      {
+        "name" : "Hostel",
+        "items" : [
+          "pajamas",
+          "cup",
+          "spoon"
+        ]
+      },
+      {
+        "name" : "Dormitory",
+        "items" : [
+          "pajamas",
+          "cup",
+          "spoon"
+        ]
+      },
+      {
+        "name" : "Apartment",
+        "items" : [
+          "cup",
+          "spoon"
+        ]
+      },
+      {
+        "name" : "Tent",
+        "items" : [
+          "cup",
+          "spoon",
+          "jetboil"
+        ]
+      }
+    ]
+  }, {
+    "name" : "Facilities",
+    "tripFeatures" : [
+      {
+        "name" : "Kitchen",
+        "items" : [
+          "spoon"
+        ]
+      },
+      {
+        "name" : "Washing machine",
+        "items" : ["washing_powder"]
+      },
+      {
+        "name" : "Dishwasher",
+        "items" : ["dishwasher_tablets"]
+      }
+    ]
+  }, {
+    "name" : "Season",
+    "tripFeatures" : [
+      {
+        "name" : "Winter",
+        "tag" : "winter",
+        "items" : [
+          "pajamas",
+          "hat",
+          "scarf",
+          "gloves",
+          "boots"
+        ]
+      },
+      {
+        "name" : "Spring",
+        "tag" : "spring",
+        "items" : [
+          "pajamas",
+          "hat",
+          "scarf",
+          "gloves",
+          "snickers",
+          "boots"
+        ]
+      },
+      {
+        "name" : "Summer",
+        "tag" : "summer",
+        "items" : [
+          "snickers"
+        ]
+      },
+      {
+        "name" : "Autumn",
+        "tag" : "autumn",
+        "items" : [
+          "pajamas",
+          "hat",
+          "scarf",
+          "gloves",
+          "snickers",
+          "boots"
+        ]
+      }
+    ]
+  }
+]

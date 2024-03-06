@@ -1,0 +1,131 @@
+[
+  {
+    "name" : "Documents",
+    "items": [
+      {"initialId": "passport", "name": "passport"},
+      {"initialId": "driver_licence", "name": "driver licence"},
+      {"initialId": "medical_insurance", "name": "medical insurance"},
+      {"initialId": "tickets", "name": "tickets"},
+      {"initialId": "medical_certificate", "name": "medical certificate"},
+      {"initialId": "maps", "name": "maps"},
+      {"initialId": "menu", "name": "menu"}
+    ]
+  },
+  {
+    "name" : "Money & cards",
+    "items": [
+      {"initialId": "cash", "name": "cash"},
+      {"initialId": "credit_cards", "name": "credit cards"},
+      {"initialId": "transport_card", "name": "transport card"},
+      {"initialId": "ski_pass", "name": "ski pass"}
+    ]
+  },
+  {
+    "name" : "Devices",
+    "items": [
+      {"initialId": "smartphone", "name": "smartphone & charger"},
+      {"initialId": "laptop", "name": "laptop & charger"},
+      {"initialId": "camera", "name": "camera & batteries"},
+      {"initialId": "player", "name": "player, earphones & charger"},
+      {"initialId": "navigator", "name": "navigator & batteries"}
+    ]
+  },
+  {
+    "name" : "Daily clothes",
+    "items": [
+      {"initialId": "jacket", "name": "jacket"},
+      {"initialId": "jeans", "name": "jeans or pants"},
+      {"initialId": "t-shorts", "name": "T-shorts"},
+      {"initialId": "underpants", "name": "underpants"},
+      {"initialId": "bra", "name": "bra"},
+      {"initialId": "socks", "name": "socks"},
+      {"initialId": "pajamas", "name": "pajamas"},
+      {"initialId": "hat", "name": "hat"},
+      {"initialId": "scarf", "name": "scarf"},
+      {"initialId": "gloves", "name": "gloves"}
+    ]
+  },
+  {
+    "name" : "Sport clothes",
+    "items": [
+      {"initialId": "s-pants", "name": "pants"},
+      {"initialId": "tights", "name": "tights"},
+      {"initialId": "swimsuit", "name": "swimsuit"}
+    ]
+  },
+  {
+    "name" : "Daily shoes",
+    "items": [
+      {"initialId": "snickers", "name": "snickers"},
+      {"initialId": "sleepers", "name": "sleepers"},
+      {"initialId": "boots", "name": "casual boots"}
+    ]
+  },
+  {
+    "name" : "Sport shoes",
+    "items": [
+      {"initialId": "s-boots", "name": "boots"},
+      {"initialId": "climbing_shoes", "name": "climbing shoes"},
+      {"initialId": "crocks", "name": "crocks"}
+    ]
+  },
+  {
+    "name" : "Luggage",
+    "items": [
+      {"initialId": "suitcase", "name": "suitcase"},
+      {"initialId": "backpack_90", "name": "backpack 90"}
+    ]
+  },
+  {
+    "name" : "Equipment",
+    "items": [
+      {"initialId": "harness", "name": "harness"},
+      {"initialId": "rope", "name": "rope"},
+      {"initialId": "tent", "name": "tent"},
+      {"initialId": "ski", "name": "ski & poles"},
+      {"initialId": "snowboard", "name": "snowboard"}
+    ]
+  },
+  {
+    "name" : "Cosmetics",
+    "items": [
+      {"initialId": "tooth_brash", "name": "tooth brash"},
+      {"initialId": "tooth_paste", "name": "tooth paste"},
+      {"initialId": "washcloth", "name": "washcloth"}
+    ]
+  },
+  {
+    "name" : "Medicine",
+    "items": [
+      {"initialId": "headache", "name": "headache peels"},
+      {"initialId": "zoviracs", "name": "zoviracs"}
+    ]
+  },
+  {
+    "name" : "Dinnerware",
+    "items": [
+      {"initialId": "cup", "name": "cup"},
+      {"initialId": "spoon", "name": "spoon"},
+      {"initialId": "knife", "name": "knife"},
+      {"initialId": "jetboil", "name": "Jetboil"}
+    ]
+  },
+  {
+    "name" : "Other",
+    "items": [
+      {"initialId": "sleep_mask", "name": "sleep mask"},
+      {"initialId": "pen_notebook", "name": "pen & notebook"},
+      {"initialId": "washing_powder", "name": "washing powder"},
+      {"initialId": "dishwasher_tablets", "name": "dishwasher tablets"}
+    ]
+  },
+  {
+    "name" : "Food",
+    "items": [
+      {"initialId": "tea", "name": "tea"},
+      {"initialId": "water", "name": "water"}
+    ]
+  }
+]
+
+
