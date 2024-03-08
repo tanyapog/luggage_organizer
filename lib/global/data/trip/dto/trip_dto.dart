@@ -1,7 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-import '../../../../global/domain/models/trip/trip.dart';
+import '../../../domain/models/trip/trip.dart';
 
 part 'trip_dto.freezed.dart';
 part 'trip_dto.g.dart';
