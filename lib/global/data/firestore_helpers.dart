@@ -5,7 +5,7 @@ import '../domain/errors/errors.dart';
 import '../domain/models/user/i_auth_facade.dart';
 
 extension FirestoreX on FirebaseFirestore {
-  Future<DocumentReference> userDocument() async {
+  Future<DocumentReference> get userDocument async {
     final user = getIt<IAuthFacade>().signedInUser;
     if (user != null) {
       return getIt<FirebaseFirestore>().collection('users').doc(user.id);
@@ -17,4 +17,8 @@ extension FirestoreX on FirebaseFirestore {
 
 extension DocumentReferenceX on DocumentReference {
   CollectionReference get tripCollection => collection('trips');
+  CollectionReference get itemGroupCollection => collection('itemGroups');
+  CollectionReference get itemCollection => collection('items');
+  CollectionReference get tripAspectCollection => collection('tripAspects');
+  CollectionReference get tripFeatureCollection => collection('tripFeatures');
 }

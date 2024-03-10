@@ -5,6 +5,7 @@ import 'package:injectable/injectable.dart';
 import '../../../../global/domain/models/user/i_auth_facade.dart';
 import '../../../../utils/event_transformers.dart';
 import '../../../../utils/logging/logging.dart';
+import '../../../default_data_setup/data/default_data_setup_service.dart';
 import '../../data/auth_failure.dart';
 
 part 'sign_in_form_event.dart';
@@ -14,8 +15,9 @@ part 'sign_in_form_bloc.freezed.dart';
 @injectable
 class SignInFormBloc extends Bloc<SignInFormEvent, SignInFormState> {
   final IAuthFacade _authFacade;
+  final DefaultDataService _defaultDataService;
 
-  SignInFormBloc(this._authFacade) : super(SignInFormState.initial()) {
+  SignInFormBloc(this._authFacade, this._defaultDataService) : super(SignInFormState.initial()) {
 
     on<EmailChanged>(
       (event, emit) => emit(state.copyWith(email: event.email, isSubmitting: false, success: null, errorMessage: null)),
@@ -28,7 +30,16 @@ class SignInFormBloc extends Bloc<SignInFormEvent, SignInFormState> {
     );
 
     on<RegisterWithEmailAndPasswordPressed>(
-      (event, emit) async => _performAuthAction(emit, emailAuthAction: _authFacade.registerWithEmailAndPassword),
+      (event, emit) async {
+        await _performAuthAction(emit, emailAuthAction: _authFacade.registerWithEmailAndPassword)
+            .then((_) {
+              if (_authFacade.isAuthorized) {
+                logData("Going to upload default data into firestore");
+                // todo handle situation when user already have "itemGroups" and "tripAspects" collections
+                _defaultDataService.uploadDataForCurrentUser();
+              }
+            });
+      },
       transformer: debounceSequential(),
     );
 
