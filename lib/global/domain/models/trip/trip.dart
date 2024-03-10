@@ -1,9 +1,8 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-import '../trip_type/trip_type.dart';
-
 part 'trip.freezed.dart';
 
+// todo tags. Maybe from selected tripFeatures
 @freezed
 class Trip with _$Trip {
   const Trip._();
@@ -12,7 +11,6 @@ class Trip with _$Trip {
     String? id,
     required String name,
     required String description,
-    TripType? type,
     @Default(false) bool complete,
     required  DateTime dateCreated,
   }) = _Trip;
