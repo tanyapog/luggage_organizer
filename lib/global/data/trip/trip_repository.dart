@@ -17,7 +17,7 @@ class TripRepository implements ITripRepository {
 
   Future<CollectionReference<TripDto>> _getCollectionRef() async {
     final userDoc = await _firestore.userDocument;
-    return userDoc.tripAspectCollection.withConverter(
+    return userDoc.tripCollection.withConverter(
       fromFirestore: (snapshot, _) => TripDto.fromFirestore(snapshot),
       toFirestore: (tripDto, _) => tripDto.toJson(),
     );
